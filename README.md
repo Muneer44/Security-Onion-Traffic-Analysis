@@ -58,25 +58,68 @@ Type 'yes' and create an admin username and password, which will be used to acce
  15. │             └─> Choose IP to access the web interface.
  16. |              └─> Choose Yes to configure NTP server and keep the defaults.
  17. |               └─> Choose No to so-allow access to the web tools. (We will set this up later). 
- 18. └─> Take note of the provided Access URL for accessing Security Onion web configuration.
-```
-## Access Security Onion via SSH
-...
+ 18. |                └─> Take note of the provided Access URL for accessing Security Onion web configuration.
+ 19. └─> Reboot and Login into your security onion machine
+ ```
+ <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/65839efd-94c8-4950-b43a-8e655e8637fe" width="500" height="280">
 
-## Firewall Allow Rule in Security Onion
-...
+
+## Access Security Onion via SSH
+
+1. Open a terminal on your local machine.
+   ```shell
+   ssh <security-onion-username>@<security-onion-ip>
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/bce5306f-f4b7-4b2d-8e88-60b66dae5aca" width="500" height="280">
+   
+   
+## Create Firewall Rule in Security Onion
+_Give local machine access to Security Onion's web interface_
+  ```shell
+   - sudo so-allow 
+   - Choose option '[a] - Analyst'
+   - <IP-address of local machine>
+  ```
+ <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/b880dc5a-95e3-4153-a558-d28be9e977bc" width="500" height="280">
 
 ## Access Security Onion Web Configuration Page
-...
+`- browse <Security-Onion-IP-address>`
+  
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/439ff556-9318-4b05-b7d8-203aa78c09b5" width="500" height="280">
+  
+
+  <img src="" width="500" height="280">
 
 ## Live Traffic in Future Lab Expansion
 ...
 
-## Download PCAP for Malware Traffic Analysis
-...
+## Download and Import PCAP for Malware Traffic Analysis
 
-## Import Malware Traffic Analysis PCAP
-...
+_Links: [Malware-Traffic-PCAP](https://github.com/pan-unit42/Wireshark-quizzes/blob/main/2023-04-Unit42-Wireshark-quiz.pcap.zip) and [Unzip Password](https://github.com/pan-unit42/Wireshark-quizzes/blob/main/README.md)_
 
-## Analyzing Logs and Tools
-...
+_Use the following commands to import the PCAP file in Security Onion:_
+   ```shell
+   - wget <Malware-Traffic-PCAP-Link_address>
+   - unzip <PCAP-filename>   #You can use 'ls' command to list the files
+   - sudo so-import-pcap <PCAP-filename> 
+   ```
+---
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/4e8aff8b-5d98-436c-b42a-073bf7be7c17" width="850" height="280">
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/73fba7c3-655b-4567-b1f6-eaf8d9db39a4" width="550" height="150">
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/102efea2-5d89-4ecf-aead-ac247ae004d6" width="700" height="280">
+
+
+## Analyzing Logs and exploring tools
+Dashboard:
+![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/40c84f4c-3572-40df-8278-c8bc6ff0f390)
+
+Kabana/ Elastic: Elasticsearch serving as a distributed search and analytics engine, and Kibana providing a web-based visualization and exploration interface for analyzing the data stored in Elasticsearch.
+![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/80de2d62-339f-4334-a142-5d126b61156f)
+
+Grafana: A versatile data visualization and monitoring tool that enables users to create and explore interactive dashboards of different Security onion machines
+![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/47f64462-38a6-4afe-9411-3eb1cbeb0ff6)
+
+CyberChef: A web application for performing various cryptographic, encoding, and data manipulation tasks.
+![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/8edaa5a9-4566-4357-86fd-7a5320383085)
+![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/deecdb21-3ccb-4872-9f13-70a2561eebe6)
+
+
