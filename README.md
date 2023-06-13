@@ -5,13 +5,11 @@ This repository documents a homelab project focused on enhancing threat detectio
 ## Table of Contents
 - [Download Links](#download-links)
 - [Security Onion VM Configuration](#security-onion-vm-configuration)
-- [Security Onion Installation Points](#security-onion-installation-points)
+- [Security Onion Installation Guide](#security-onion-installation-guide)
 - [Access Security Onion via SSH](#access-security-onion-via-ssh)
-- [Firewall Allow Rule in Security Onion](#firewall-allow-rule-in-security-onion)
-- [Access Security Onion Web Configuration Page](#access-security-onion-web-configuration-page)
-- [Live Traffic in Future Lab Expansion](#live-traffic-in-future-lab-expansion)
-- [Download PCAP for Malware Traffic Analysis](#download-pcap-for-malware-traffic-analysis)
-- [Import Malware Traffic Analysis PCAP](#import-malware-traffic-analysis-pcap)
+- [Create Firewall Rule in Security Onion](#create-firewall-rule-in-security-onion)
+- [Download and Import PCAP for Malware Traffic Analysis](#download-and-import-pcap-for-malware-traffic-analysis)
+- [Access Security Onion Web Configuration Page](#access-security-onion-web-configuration-page)  
 - [Analyzing Logs and Tools](#analyzing-logs-and-tools)
 
 ## Download Links
@@ -31,12 +29,14 @@ Note: These specs are sufficient for PCAP import functionality. To perform more 
 
 ![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/e895b677-2d87-444a-8674-a2b77c13de5f)
 
+---
+
 ## Security Onion Installation guide
 <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/59b85019-5742-4014-bf30-00cd3ca6f03b" width="450" height="300">
 
 <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/442f03cf-c84d-4008-bf5e-f66915124366" width="500" height="280">
 
-Type 'yes' and create an admin username and password, which will be used to access your Security Onion console.
+- Continue and create an admin username and password, which will be used to access your Security Onion console.
 
 ```
   ## Security Onion Installation Navigation:
@@ -63,6 +63,7 @@ Type 'yes' and create an admin username and password, which will be used to acce
  ```
  <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/65839efd-94c8-4950-b43a-8e655e8637fe" width="500" height="280">
 
+---
 
 ## Access Security Onion via SSH
 
@@ -71,6 +72,7 @@ Type 'yes' and create an admin username and password, which will be used to acce
    ssh <security-onion-username>@<security-onion-ip>
 <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/bce5306f-f4b7-4b2d-8e88-60b66dae5aca" width="500" height="280">
    
+---   
    
 ## Create Firewall Rule in Security Onion
 _Give local machine access to Security Onion's web interface_
@@ -81,16 +83,7 @@ _Give local machine access to Security Onion's web interface_
   ```
  <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/b880dc5a-95e3-4153-a558-d28be9e977bc" width="500" height="280">
 
-## Access Security Onion Web Configuration Page
-`- browse <Security-Onion-IP-address>`
-  
-<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/439ff556-9318-4b05-b7d8-203aa78c09b5" width="500" height="280">
-  
-
-  <img src="" width="500" height="280">
-
-## Live Traffic in Future Lab Expansion
-...
+---
 
 ## Download and Import PCAP for Malware Traffic Analysis
 
@@ -107,19 +100,45 @@ _Use the following commands to import the PCAP file in Security Onion:_
 <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/73fba7c3-655b-4567-b1f6-eaf8d9db39a4" width="550" height="150">
 <img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/102efea2-5d89-4ecf-aead-ac247ae004d6" width="700" height="280">
 
+---
 
-## Analyzing Logs and exploring tools
-Dashboard:
-![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/40c84f4c-3572-40df-8278-c8bc6ff0f390)
-
-Kabana/ Elastic: Elasticsearch serving as a distributed search and analytics engine, and Kibana providing a web-based visualization and exploration interface for analyzing the data stored in Elasticsearch.
-![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/80de2d62-339f-4334-a142-5d126b61156f)
-
-Grafana: A versatile data visualization and monitoring tool that enables users to create and explore interactive dashboards of different Security onion machines
-![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/47f64462-38a6-4afe-9411-3eb1cbeb0ff6)
-
-CyberChef: A web application for performing various cryptographic, encoding, and data manipulation tasks.
-![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/8edaa5a9-4566-4357-86fd-7a5320383085)
-![image](https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/deecdb21-3ccb-4872-9f13-70a2561eebe6)
+## Access Security Onion Web Configuration Page
+`- browse <Security-Onion-IP-address>`
+  
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/439ff556-9318-4b05-b7d8-203aa78c09b5" width="500" height="280">
 
 
+## Analyzing Logs and Tools
+_**Dashboard:**_   
+
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/40c84f4c-3572-40df-8278-c8bc6ff0f390" width="800" height="400">  
+
+---
+
+_**Kabana/ Elastic:** Elasticsearch serving as a distributed search and analytics engine, and Kibana providing a web-based visualization and exploration interface for analyzing the data stored in Elasticsearch._  
+
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/80de2d62-339f-4334-a142-5d126b61156f" width="650" height="320">   
+
+---
+
+_**Grafana:** A versatile data visualization and monitoring tool that enables users to create and explore interactive dashboards of different Security onion machines._  
+
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/47f64462-38a6-4afe-9411-3eb1cbeb0ff6" width="650" height="330">   
+
+---
+
+_**CyberChef:** A web application for performing various cryptographic, encoding, and data manipulation tasks._   
+
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/8edaa5a9-4566-4357-86fd-7a5320383085" width="650" height="320">
+<img src="https://github.com/Muneer44/Security-Onion-Traffic-Analysis/assets/117259069/deecdb21-3ccb-4872-9f13-70a2561eebe6" width="650" height="320">   
+
+---
+
+## End Note
+More features and capabilities can be explored in Security Onion beyond the import PCAP installation. Looking forward to:
+
+_- **Live traffic analysis:** Extending the lab setup to analyze real-time network traffic and gain insights into ongoing threats and anomalies._
+
+_- **Topology setup:** Configuring a more complex network topology to simulate real-world scenarios and test Security Onion's effectiveness in diverse environments._
+
+_- **Simulating real-world anomalies:** Creating intentional anomalies or introducing various attack vectors to evaluate Security Onion's ability to detect and respond to such threats._
